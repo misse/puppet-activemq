@@ -6,7 +6,9 @@ class activemq::package::tarball (
   $system_user  = $activemq::system_user,
   $manage_user  = $activemq::manage_user,
   $manage_group = $activemq::manage_group,
-) {
+  $wrapper_logfile_maxsize  = $activemq::wrapper_logfile_maxsize,
+  $wrapper_logfile_maxfiles  = $activemq::wrapper_logfile_maxfiles,
+  {
 
   # wget from https://github.com/maestrodev/puppet-wget
   include wget

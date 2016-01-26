@@ -27,6 +27,8 @@ class activemq (
   $console            = $activemq::params::console,
   $package_type       = $activemq::params::package_type,
   $architecture_flag  = $activemq::params::architecture_flag,
+  $wrapper_logfile_maxsize  = $activemq::params::wrapper_logfile_maxsize,
+  $wrapper_logfile_maxfiles  = $activemq::params::wrapper_logfile_maxfiles,
   $activemqxml_source = undef,
 ) inherits activemq::params {
 
