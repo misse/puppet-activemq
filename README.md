@@ -1,4 +1,4 @@
-# puppet-activemq
+# misse-activemq
 
 ## Overview
 This is a simple puppet module for deploying an Apache ActiveMQ server
@@ -45,15 +45,14 @@ You can also install activemq from a yum repo
     class { 'activemq::stomp':
       port => 61613,
     }
-
-### Upgrading
-
-The version 2.0.0 of the module changed the default installation dir from /opt to /usr/share to match
-PuppetLabs' ActieMQ rpm installation path
+# Related work
+  This is a fork of maestrodev/activemq v2.0.3 to add more configurability to activemq.
 
 # License
 
     Copyright 2012-2014 MaestroDev
+    
+    Copyright 2016	Misse
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
