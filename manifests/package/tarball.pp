@@ -8,6 +8,7 @@ class activemq::package::tarball (
   $manage_group = $activemq::manage_group,
   $wrapper_logfile_maxsize  = $activemq::wrapper_logfile_maxsize,
   $wrapper_logfile_maxfiles  = $activemq::wrapper_logfile_maxfiles,
+  )
   {
 
   # wget from https://github.com/maestrodev/puppet-wget
