@@ -88,19 +88,21 @@ class activemq (
       require => Anchor['activemq::package::end'],
       notify  => Service['activemq'],
     }
+  }
 
   if $wrapper_logfile_maxsize != undef {
-    augeas { 'activemq-maxmemory':
-      changes => [ "set wrapper.logfile.maxsize ${max_memory}" ],
+    augeas { 'activemq-logfilemaxsize':
+      changes => [ "set wrapper.logfile.maxsize ${wrapper_logfile_maxsize}" ],
       incl    => $wrapper,
       lens    => 'Properties.lns',
       require => Anchor['activemq::package::end'],
       notify  => Service['activemq'],
     }
+  }
 
   if $wrapper_logfile_maxfiles != undef {
-    augeas { 'activemq-maxmemory':
-      changes => [ "set wrapper.logile.maxfiles ${max_memory}" ],
+    augeas { 'activemq-logsizemaxfiles':
+      changes => [ "set wrapper.logile.maxfiles {$wrapper_logfile_maxfiles}" ],
       incl    => $wrapper,
       lens    => 'Properties.lns',
       require => Anchor['activemq::package::end'],
