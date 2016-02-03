@@ -102,7 +102,7 @@ class activemq (
 
   if $wrapper_logfile_maxfiles != undef {
     augeas { 'activemq-logsizemaxfiles':
-      changes => [ "set wrapper.logile.maxfiles ${wrapper_logfile_maxfiles}" ],
+      changes => [ "set wrapper.logfile.maxfiles ${wrapper_logfile_maxfiles}" ],
       incl    => $wrapper,
       lens    => 'Properties.lns',
       require => Anchor['activemq::package::end'],
