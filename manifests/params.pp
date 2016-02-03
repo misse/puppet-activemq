@@ -9,8 +9,8 @@ class activemq::params (
   $package_type   = 'tarball',
   $manage_user    = true,
   $manage_group   = true,
-  $wrapper_logfile_maxsize  = 0,
-  $wrapper_logfile_maxfiles  = 0,
+  $wrapper_logfile_maxsize  = undef,
+  $wrapper_logfile_maxfiles  = undef,
 ) {
 
   # path flag for the activemq init script template
