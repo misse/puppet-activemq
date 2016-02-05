@@ -85,7 +85,9 @@ class activemq::package::tarball (
     group   => $group,
     mode    => '0644',
     content => template('activemq/wrapper.conf.erb'),
+    replace => 'no',
     require => [File["${home}/activemq"],File['/etc/init.d/activemq']],
     notify  => Service['activemq'],
   }
 }
+# vim: tabstop=2 expandtab shiftwidth=2 softtabstop=2
